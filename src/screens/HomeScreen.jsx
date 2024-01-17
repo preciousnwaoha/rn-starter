@@ -47,6 +47,12 @@ const HomeScreen = (props) => {
       onPress={() => navigate('Text')}
       />
 
+<Button
+      title="Go to Box Demo"
+      onPress={() => navigate('Box')}
+      />
+
+
 
     </SafeAreaView>
 
