@@ -2,11 +2,11 @@ import React, {useReducer} from "react";
 import { StyleSheet, View } from "react-native";
 import ColorAdjuster from "../components/ColorAdjuster";
 
-const COLOR_INCREMENT = 25;
+const COLOR_INCREMENT = 15;
 
 const reducer = (state, action) => {
     const {red, green, blue} = state;
-    const {type: colorToChange, payload: amount} = action;
+    const {colorToChange, amount} = action;
 
     const newAmount = amount * COLOR_INCREMENT
     
@@ -33,20 +33,17 @@ const ColorSetterScreen = () => {
     );
 
     const handleChange = (colorToChange, amount) => {
-        dispatch({type: `change_${colorToChange}`, payload: amount})
+        dispatch({colorToChange, amount})
     }
 
     const {red, green, blue} = state;
     
-    console.log(state)
 
     return <View style={styles.container}>
         <ColorAdjuster color={"Red"} 
         onChange={handleChange}/>
-        <ColorAdjuster color={"Green"} 
-        onChange={handleChange} />
-        <ColorAdjuster color={"Blue"} 
-        onChange={handleChange}/>
+        <ColorAdjuster color={"Green"} onChange={handleChange} />
+        <ColorAdjuster color={"Blue"} onChange={handleChange}/>
 
         <View style={{height: 100, width: 100, backgroundColor: `rgb(${red}, ${green}, ${blue})`}} />
     </View>;

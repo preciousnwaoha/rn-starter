@@ -8,13 +8,13 @@ const ColorAdjuster = ({color, onChange}) => {
         <Button
             title={`Increase ${color}`}
             onPress={() => {
-                onChange(color.toLowerCase(), 1, 1)
+                onChange(color.toLowerCase(), 1)
             }}
         />
         <Button
             title={`Decrease ${color}`}
             onPress={() => {
-                onChange(color.toLowwerCase(), 0, -1)
+                onChange(color.toLowerCase(), -1)
             }}
         />
 
