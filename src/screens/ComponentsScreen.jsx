@@ -4,7 +4,10 @@ import { Text, StyleSheet } from "react-native";
 const ComponentsScreen = () => {
     const name = "Stephen";
     return (
-        <Text style={styles.textStyle}>Getting started with React Native!</Text>
+        <View>
+            <Text style={styles.textStyle}>Getting started with React Native!</Text>
+            <Text style={styles.subHeaderStyle}>My name is {name}</Text>
+        </View>
     );
 
 }
