@@ -18,6 +18,8 @@ const ColorAdjuster = ({color, onChange}) => {
             }}
         />
 
+        
+
 
     </View>;
 }

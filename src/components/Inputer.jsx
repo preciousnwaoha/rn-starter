@@ -24,6 +24,9 @@ const Inputer = () => {
         placeholder="Type to listen to your mind!"
         onChangeText={newText => setText(newText)}
         defaultValue={text}
+        autoCapitalize='none'
+        autoCorrect={false}
+        
       />
       
     </View>

@@ -41,7 +41,16 @@ const HomeScreen = (props) => {
       title="Go to Color Setter Demo"
       onPress={() => navigate('ColorSetter')}
       />
+
+<Button
+      title="Go to Text Demo"
+      onPress={() => navigate('Text')}
+      />
+
+
     </SafeAreaView>
+
+    
   );
 };
 
